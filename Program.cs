@@ -23,11 +23,20 @@ Console.WriteLine(Eurospin.ToString());
 float numero = 0f;
 */
 
-Console.WriteLine("I prodotti attualmente generati sono: " + Product.GetTotalGeneratedProducts());
+try
+{
+    Console.WriteLine("I prodotti attualmente generati sono: " + Product.GetTotalGeneratedProducts());
+    Water AcquaSantAnna = new Water("Acqua", "Frizzante", 2f, "Alimentari", "Sant'Anna", 2.5f, 2f, 12f, "Vinadio");
+    Console.WriteLine(AcquaSantAnna);
+}
+catch (Exception exeption) 
+{
+	Console.WriteLine("è successo qualcosa di brutto: " + exeption.Message);
+}
 
-Product LavatriceSamsung = new Product("Lavatrice Samsung SE4000", "Lavatrice ultra performante in classe A", 999.99f, "elettrodomestico");
-Water AcquaSantAnna = new Water("Acqua", "Frizzante", 2f, "Alimentari", "Sant'Anna", 2.5f, 2f, 7f, "Vinadio");
-Fruit Limone = new Fruit("Limone", "Limone grande", 0.5f, "Alimentari", "Sicilia", "Agrume");
+
+//Product LavatriceSamsung = new Product("Lavatrice Samsung SE4000", "Lavatrice ultra performante in classe A", 999.99f, "elettrodomestico");
+/*Fruit Limone = new Fruit("Limone", "Limone grande", 0.5f, "Alimentari", "Sicilia", "Agrume");
 Fruit Mela1 = new Fruit("Mela verde", "Mela rosso", 0.2f, "mela", "Roma", "frutta");
 Fruit Mela2 = new Fruit("Mela gialla", "Mela gialla", 0.2f, "mela", "Roma", "frutta");
 
@@ -52,6 +61,7 @@ Console.WriteLine(AcquaSantAnna.ToString());
 Console.WriteLine(Limone.GetOrigin());
 
 Console.WriteLine(sacchettoDiMele.ToString());
+*/
 
 /*
 List<Product> mieiProdottiInCasa = new List<Product> { LavatriceSamsung, AcquaSantAnna, Limone, Mela1, Mela2, sacchettoDiMele };
@@ -68,6 +78,8 @@ foreach(Product prodottoScansionato in mieiProdottiInCasa)
 }
 */
 
+
+/*
 PhisicalShopCart mioCarrelloDellaSpesa = new PhisicalShopCart(20);
 mioCarrelloDellaSpesa.AddProduct(sacchettoDiMele);
 mioCarrelloDellaSpesa.AddProduct(Limone);
@@ -75,3 +87,4 @@ mioCarrelloDellaSpesa.AddProduct(AcquaSantAnna);
 
 Console.WriteLine("STAMPIAMO IL CARRELLO");
 Console.WriteLine(mioCarrelloDellaSpesa.ToString());
+*/
